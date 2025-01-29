@@ -23,3 +23,4 @@ print("is the host computation the same as the GPU computation? {}".format(np.al
 with open('a_speed_test.py','r') as f:
     timecalcode=f.read()
 %prun -s cumulative exec(timecalcode)"""
+# test
