@@ -19,7 +19,7 @@ for i in range (drv.Device.count()):
         device_attributes[str(k)] = v
     num_mp = device_attributes['MULTIPROCESSOR_COUNT']
     print("Device #%d: %s" % (i, gpu_device.name()))
-    cuda_cores_per_mp = {5.0: 128, 5.1: 128, 5.2: 128, 6.0: 64, 6.1: 128, 6.2: 128, 7.2: 64, 7.5: 64}[compute_capability]
+    cuda_cores_per_mp = {5.0: 128, 5.1: 128, 5.2: 128, 6.0: 64, 6.1: 128, 6.2: 128, 7.2: 64, 7.5: 64,8.9:128}[compute_capability]
     print("Number of CUDA Cores: ", cuda_cores_per_mp * num_mp)
     print("\t Compute Capability: %d.%d" % gpu_device.compute_capability())
     print("\t Total Memory: %s mb" % (gpu_device.total_memory()//(1024**2)))
